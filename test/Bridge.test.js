@@ -1,8 +1,8 @@
 const ETHToken = artifacts.require("./ETHToken")
 const ETHBridge = artifacts.require("./ETHBridge")
 
-const BSCBridge = artifacts.require("./BSCBridge")
-const BSCToken = artifacts.require("./BSCToken")
+const PolyBridge = artifacts.require("./PolyBridge")
+const PolyToken = artifacts.require("./PolyToken")
 
 require('chai')
     .use(require('chai-as-promised'))
@@ -10,10 +10,10 @@ require('chai')
 
 contract('Bridge', ([deployer, user]) => {
 
-    const name = 'DApp University'
-    const symbol = 'DAPP'
+    const name = 'Test Core Token'
+    const symbol = 'TCT'
 
-    let ethToken, ethBridge, bscToken, bscBridge, result
+    let ethToken, ethBridge, polyToken, polyBridge, result
 
     beforeEach(async () => {
         ethToken = await ETHToken.new(name, symbol)
@@ -22,10 +22,10 @@ contract('Bridge', ([deployer, user]) => {
         await ethToken.mint(deployer, '1000')
         await ethToken.setBridge(ethBridge.address)
 
-        bscToken = await BSCToken.new(name, symbol)
-        bscBridge = await ETHBridge.new(bscToken.address)
+        polyToken = await PolyToken.new(name, symbol)
+        polyBridge = await ETHBridge.new(polyToken.address)
 
-        await bscToken.setBridge(bscBridge.address)
+        await polyToken.setBridge(polyBridge.address)
     })
 
     describe('Deployment', () => {
@@ -33,8 +33,8 @@ contract('Bridge', ([deployer, user]) => {
             result = await ethBridge.token()
             result.should.equal(ethToken.address)
 
-            result = await bscBridge.token()
-            result.should.equal(bscToken.address)
+            result = await polyBridge.token()
+            result.should.equal(polyToken.address)
         })
     })
 
