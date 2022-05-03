@@ -1,5 +1,5 @@
 const ETHToken = artifacts.require("./ETHToken")
-const BSCToken = artifacts.require("./BSCToken")
+const PolyToken = artifacts.require("./PolyToken")
 
 require('chai')
     .use(require('chai-as-promised'))
@@ -9,23 +9,23 @@ const EVM_REVERT = 'VM Exception while processing transaction: revert'
 
 contract('Token', ([deployer]) => {
 
-    const name = 'DApp University'
-    const symbol = 'DAPP'
+    const name = 'Test Core Token'
+    const symbol = 'TCT'
 
-    let ethToken, bscToken, result
+    let ethToken, polyToken, result
 
     describe('Deployment', () => {
 
         beforeEach(async () => {
             ethToken = await ETHToken.new(name, symbol)
-            bscToken = await BSCToken.new(name, symbol)
+            polyToken = await PolyToken.new(name, symbol)
         })
 
         it('Returns the token name', async () => {
             result = await ethToken.name()
             result.should.equal(name)
 
-            result = await bscToken.name()
+            result = await polyToken.name()
             result.should.equal(name)
         })
 
@@ -33,7 +33,7 @@ contract('Token', ([deployer]) => {
             result = await ethToken.symbol()
             result.should.equal(symbol)
 
-            result = await bscToken.symbol()
+            result = await polyToken.symbol()
             result.should.equal(symbol)
         })
 
@@ -41,7 +41,7 @@ contract('Token', ([deployer]) => {
             result = await ethToken.owner()
             result.should.equal(deployer)
 
-            result = await bscToken.owner()
+            result = await polyToken.owner()
             result.should.equal(deployer)
         })
 
