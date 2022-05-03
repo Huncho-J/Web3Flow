@@ -27,6 +27,15 @@ module.exports = {
 				)
 			},
 			network_id: 97
+		},
+		mumbai_testnet: {
+			provider: function () {
+				return new HDWalletProvider(
+					[process.env.PRIVATE_KEY], // Private Key
+					`https://polygon-mumbai.infura.io/v3/${process.env.INFURA_API_KEY}` // URL to Mumabi Node
+				)
+			},
+			network_id: 80001
 		}
 	},
 
