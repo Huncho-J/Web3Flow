@@ -46,7 +46,6 @@ contract('Token', ([deployer]) => {
         })
 
         it('Returns bridge address', async () => {
-            // Remember, initial deployment of contract assigns deployer as bridge (to allow inital mint)
             result = await ethToken.bridge()
             result.should.equal(deployer)
 
