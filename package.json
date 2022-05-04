@@ -1,5 +1,5 @@
 {
-  "name": "token_bridge",
+  "name": "web3flow",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -49,5 +49,22 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "description": "",
+  "main": "truffle-config.js",
+  "directories": {
+    "test": "test"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Huncho-J/Web3Flow.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Huncho-J/Web3Flow/issues"
+  },
+  "homepage": "https://github.com/Huncho-J/Web3Flow#readme"
 }
