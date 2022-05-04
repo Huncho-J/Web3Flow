@@ -1,4 +1,3 @@
-import logo from '../logo.png';
 
 const Navbar = ({ web3Handler, account }) => {
     return (
