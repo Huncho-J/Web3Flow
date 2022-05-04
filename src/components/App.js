@@ -47,7 +47,7 @@ function App() {
 			const mumbaiProvider = new ethers.providers.JsonRpcProvider(`https://polygon-mumbai.infura.io/v3/${process.env.REACT_APP_INFURA_API_KEY}`)
 			setPolyProvider(mumbaiProvider)
 
-			// Set signer
+			// Set signer Account
 			const ethSigner = ethProvider.getSigner()
 			setETHSigner(ethSigner)
 
@@ -105,11 +105,11 @@ function App() {
 			const polyToken = new ethers.Contract(polyTokenAddress, PolyToken.abi, mumbaiProvider)
 			setPolyToken(polyToken)
 
+			//CURRENTLY WORKING ON UPDATING THIS LOGIC WITH CHAINLINK KEEPERS
 			// Depending on the network, we listen for when tokens are burned from the bridgeto mint 
 			// tokens on the other network... This is only for demonstration, for security it's more ideal to
 			// have this specific logic on a server somewhere else, with a more secure implementation in place
 			// incase of potential downtime (or if a user refreshes the page)!
-			//CURRENTLY WORKING ON UPDATING THIS LOGIC WITH CHAINLINK KEEPERS
 
 			// If networkId === 4 (Rinkeby), listen to transfer events from the ETHBridge, then make a call to PolyBridge
 			if (networkId === '4') {
@@ -252,7 +252,7 @@ function App() {
 					<h1 className='my-4' >Web3Flow Dapp</h1>
 					<hr />
 					<Row className='text-center'>
-						<p>Bridge your $TBT tokens between Rinkeby and Binance Chain</p>
+						<p>Bridge your $TCT between Rinkeby and Mumbai Polygon</p>
 						<div>
 							<input type="number" onChange={(e) => { setAmount(e.target.value) }} placeholder='Enter amount' />
 							<button onClick={bridgeHandler} className='button btn-sm mx-3'>{`Bridge to ${otherNetwork}`}</button>
