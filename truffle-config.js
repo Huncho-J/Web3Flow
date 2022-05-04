@@ -5,6 +5,7 @@ const HDWalletProvider = require("@truffle/hdwallet-provider");
 
 module.exports = {
 	networks: {
+		//dev environment
 		// development: {
 		// 	host: "127.0.0.1",
 		// 	port: 7545,
@@ -18,15 +19,6 @@ module.exports = {
 				)
 			},
 			network_id: 4
-		},
-		bsc_testnet: {
-			provider: function () {
-				return new HDWalletProvider(
-					[process.env.PRIVATE_KEY], // Private Key
-					`https://data-seed-prebsc-1-s1.binance.org:8545` // URL to Binance Node
-				)
-			},
-			network_id: 97
 		},
 		mumbai_testnet: {
 			provider: function () {
