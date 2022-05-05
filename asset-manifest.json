@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/web3flow/static/css/main.ced84413.chunk.css",
+    "main.js": "/web3flow/static/js/main.9114fbcc.chunk.js",
+    "main.js.map": "/web3flow/static/js/main.9114fbcc.chunk.js.map",
+    "runtime-main.js": "/web3flow/static/js/runtime-main.6cdb3a04.js",
+    "runtime-main.js.map": "/web3flow/static/js/runtime-main.6cdb3a04.js.map",
+    "static/css/2.8c0e6b67.chunk.css": "/web3flow/static/css/2.8c0e6b67.chunk.css",
+    "static/js/2.4c6d2f5e.chunk.js": "/web3flow/static/js/2.4c6d2f5e.chunk.js",
+    "static/js/2.4c6d2f5e.chunk.js.map": "/web3flow/static/js/2.4c6d2f5e.chunk.js.map",
+    "static/js/3.85578771.chunk.js": "/web3flow/static/js/3.85578771.chunk.js",
+    "static/js/3.85578771.chunk.js.map": "/web3flow/static/js/3.85578771.chunk.js.map",
+    "index.html": "/web3flow/index.html",
+    "static/css/2.8c0e6b67.chunk.css.map": "/web3flow/static/css/2.8c0e6b67.chunk.css.map",
+    "static/css/main.ced84413.chunk.css.map": "/web3flow/static/css/main.ced84413.chunk.css.map",
+    "static/js/2.4c6d2f5e.chunk.js.LICENSE.txt": "/web3flow/static/js/2.4c6d2f5e.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.6cdb3a04.js",
+    "static/css/2.8c0e6b67.chunk.css",
+    "static/js/2.4c6d2f5e.chunk.js",
+    "static/css/main.ced84413.chunk.css",
+    "static/js/main.9114fbcc.chunk.js"
+  ]
+}
